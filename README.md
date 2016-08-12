@@ -1,6 +1,1 @@
-To initialize, run:
-`bower install`
-`npm install`
-`bundle install`
-
-To develop, simply run "gulp"
+Just run `jekyll serve`
