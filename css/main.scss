@@ -41,7 +41,7 @@ $on-desktop:       1024px;
 //@include foundation-everything;
 
 .main-logo {
-  background-image: url("/img/logo.png");
+  background-image: url("../img/logo.png");
   height: 70px;
   width: 70px;
   background-size: 70px 70px;
@@ -52,8 +52,8 @@ $on-desktop:       1024px;
 
 body {
   //background-color: teal;
-  //background-image: url("/img/light.png");
-  background-image: url("/img/background.png");
+  //background-image: url("../img/light.png");
+  background-image: url("../img/background.png");
   background-size: 80px 80px;
   font-family: $base-font-family;
   margin: 0;
