@@ -2,10 +2,3 @@ _site
 .sass-cache
 .jekyll-metadata
 
-
-# These are build product folders for gulp, see _sass and _javascript for source files
-css/
-js/
-
-bower_components/
-node_modules/

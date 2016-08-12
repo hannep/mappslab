@@ -35,7 +35,7 @@ gulp.task('sass', function () {
 
 gulp.task('javascript', function (cb) {
   pump([
-        gulp.src(['bower_components/foundation-sites/js/*.js', 'bower_components/jquery/dist/jquery.js']),
+        gulp.src(['bower_components/jquery/dist/jquery.js'/*, 'bower_components/foundation-sites/dist/foundation.js'*/]),
         wrap('// <%= file.path %>\n<%= contents %>'),
         concat('all.js'),
         gulp.dest('js')
