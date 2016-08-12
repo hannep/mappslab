@@ -1,19 +1,49 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
   <div class="top-bar" id="top-nav-menu">
-    <div class="main-logo"></div>
-    <ul class="menu">
-      <li><a href="/">MappsLab</a></li>
-      <li><a href="/philosophy">Our Philosophy</a></li>
-      <li><a href="/teacher-resources">Teacher Resources</a></li>
-    </ul>
+    <div class="colored-menu-container">
+      <div class="main-logo-container">
+        <div class="main-logo"></div>
+        <div class="top-menu-toggle"></div>
+      </div>
+      <ul class="menu">
+        <li><a href="/">MappsLab</a></li>
+        <li><a href="/philosophy">Our Philosophy</a></li>
+        <li><a href="/teacher-resources">Teacher Resources</a></li>
+      </ul>
+    </div>
   </div>
   <div class="top-bar-spacer"></div>
   {{content}}
-  <script src="/js/all.js"></script>
   </body>
+  <script>
+    function hasClass(el, className) {
+      return el.classList.contains(className);
+    }
+
+    function addClass(el, className) {
+      el.classList.add(className);
+    }
+
+    function removeClass(el, className) {
+      el.classList.remove(className);
+    }
+
+    function toggleClass(el, className) {
+      if (hasClass(el, className)) {
+        removeClass(el, className);
+      } else {
+        addClass(el, className);
+      }
+    }
+    var menu = document.querySelectorAll("#top-nav-menu .menu")[0]
+    document.querySelectorAll(".top-menu-toggle")[0].addEventListener("click", function () {
+      toggleClass(menu, "toggled-on");
+    })
+  </script>
 </html>
